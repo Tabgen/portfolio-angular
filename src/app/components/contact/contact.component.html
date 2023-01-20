@@ -1,0 +1,50 @@
+<section class="contact">
+    <div class="contact-container" id="contact-container">
+        <div class="overskrift">{{ mailresponse }}</div>
+        <div class="align-top">
+            <div class="fornavn">
+                <h3>Navn</h3>
+                <input type="text" class="input-top">
+            </div>
+            <div class="Epost">
+                <h3>E-post</h3>
+                <input type="text" class="input-top">
+            </div>
+        </div>
+        <div class="align-bottom">
+            <h3>Melding</h3>
+            <textarea id="melding" rows="8" cols="55"></textarea>
+        </div>
+        <div class="submit">
+            <button class="submit">Send</button>
+        </div>
+    </div>
+    
+        <div class="alignment-center">
+            <div class="login-form" id="login-form">
+                <div id="login-text">Login</div>
+                <div class="align-text-left">
+                    <h3>E-post</h3>
+                    <input type="text" id="email" class="logininput">
+                </div>
+                <div class="align-text-left">
+                    <h3>Passord</h3>
+                    <input type="password" id="passord" class="logininput">
+                </div>
+                <div class="row">
+                    <button class="submit" (click)="logintodb()">Login</button>
+                    <button id="close" (click)="hidelogin()">Close</button>
+                </div>
+                
+            </div>
+        </div>
+    
+    
+</section>
+<footer id="footer">
+        <button id="login" (click)="showlogin()">admin</button>
+    
+
+    
+</footer>
+<div id="overlay"></div>

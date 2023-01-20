@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tangen-portfolio": {
+      "hosting": {
+        "my-app": [
+          "tangen-portfolio"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tangen-portfolio"
+  }
+}

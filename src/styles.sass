@@ -1,0 +1,694 @@
+/* You can add global styles to this file, and also import other style files */
+
+*
+    margin: 0px 
+    font-family: sans-serif
+    scroll-behavior: smooth
+
+.tswitch
+    background-color: transparent
+    border: none
+    font-size: 2.5rem
+
+.name-container
+    text-align: left
+    display: flex
+    align-items: center
+    flex-direction: column
+    width: 75vw
+    padding-top: 150px
+    font-size: 1.2rem
+    font-weight: normal
+
+.name-container h1
+    font-family: caveat
+    font-size: 12rem
+
+header 
+    height: 100vh
+    scroll-snap-align: start
+
+.scroll-indicator 
+    width: 100%
+    display: flex 
+    justify-content: flex-end
+    align-items: flex-end
+    height: 58%
+    font-size: 2.5rem
+    
+
+.scroll-indicator i
+    margin: 50px
+    margin-right: 100px
+
+.about-container 
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 15rem
+    scroll-snap-align: start
+
+.about 
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 30vw
+    height: 50vh
+
+.about h2 
+    font-size: 4rem
+    margin-bottom: 25px
+
+.about p 
+    font-size: 2rem
+
+.about-input 
+    display: none
+    flex-direction: column
+    justify-content: center
+    width: 30vw
+    height: 50vh
+    gap: 2rem
+
+.about-input input
+    font-size: 2rem
+    border: none
+    border-bottom: 2px solid black
+
+.about-input textarea
+    font-size: 1.6rem
+    border: none
+    border-bottom: 2px solid black
+
+.projects 
+    height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    scroll-snap-align: start
+
+
+.projects h2
+    font-size: 3re
+
+.filter-container 
+    display: flex
+    justify-content: space-evenly
+    width: 350px
+    margin: 20px
+
+
+.filter-container button
+    border: none
+    width: 100px
+    height: 40px
+    border-radius: 30px
+    cursor: pointer
+    font-size: 1rem
+
+
+.card-container 
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(2, 1fr)
+    grid-column-gap: 50px
+    grid-row-gap: 30px
+    margin: 20px
+    
+
+.createnewcard
+    border: 2px solid black
+    border-radius: 65px
+    width: 500px
+    height: 281px
+    display: flex
+    justify-content: center
+    cursor: pointer
+    background-image: url("https://images.unsplash.com/photo-1623057000049-e220f79c7051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1408&q=80")
+    background-size: cover
+    background-position: center
+    filter: grayscale(1%)
+    -webkit-filter: grayscale(0%)
+    -moz-filter: grayscale(0%)
+    transition: all 0.1s
+    -webkit-transition: all 0.2s
+    -moz-transition: all 0.2s
+
+
+.createnewcard:hover 
+    transform: scale(1.1)
+    -moz-transform: scale(1.1)
+
+.cards 
+    border: 2px solid black
+    border-radius: 65px
+    width: 500px
+    height: 281px
+    display: flex
+    justify-content: center
+    cursor: pointer
+    background-image: url("https://images.unsplash.com/photo-1603486002664-a7319421e133?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1842&q=80")
+    background-size: cover
+    filter: grayscale(1%)
+    -webkit-filter: grayscale(0%)
+    -moz-filter: grayscale(0%)
+    transition: all 0.2s
+    -webkit-transition: all 0.2s
+    -moz-transition: all 0.2s
+
+
+.cards:hover 
+    transform: scale(1.1)
+    -moz-transform: scale(1.1)
+
+#newcard
+    display: none
+
+.modal 
+    display: none
+    position: absolute
+    border: 2px solid rgb(0, 0, 0)
+    width: 1250px
+    height: 575px
+    border-radius: 65px
+    justify-content: space-between
+    z-index: 11
+    background-color: white
+    top: 25%
+
+
+.modal-right 
+    padding: 20px
+    z-index: 11
+
+
+.modal-left-top 
+    display: flex
+    justify-content: space-between
+    width: 105%
+
+
+.modal-left-top button 
+    background-color: white
+    border: none
+    cursor: pointer
+    font-size: 1.7rem
+    font-weight: 400
+
+
+.info 
+    display: flex
+    flex-direction: column
+
+
+.under-img 
+    margin-top: 20px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding-left: 40px
+    height: 25%
+
+
+.modal-right-text h2 
+    font-size: 4.5rem
+
+
+.modal-links 
+    font-size: 1.6rem
+    width: 50%
+    display: flex
+    justify-content: space-between
+
+
+.modal-links b 
+    padding: 2px
+    padding-left: 5px
+    margin-right: 20px
+    font-weight: normal
+
+
+.modal-img 
+    height: 366px
+    width: 650px
+    background-image: url("https://images.unsplash.com/photo-1603486002664-a7319421e133?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1842&q=80")
+    background-size: cover
+    border-radius: 65px
+
+
+.modal-left 
+    display: flex
+    flex-direction: column
+    padding: 20px
+    width: 50%
+
+.info 
+    width: 90%
+    font-size: 1.5rem
+
+.info a 
+    color: blue
+    cursor: pointer
+
+
+.modal-links a 
+    display: flex
+    justify-content: space-between
+    width: 50%
+    text-decoration: none
+    color: black
+    font-size: 2rem
+
+.github 
+    display: flex
+    justify-content: space-between
+    
+.scroll-container
+    scroll-snap-type: y mandatory
+    overflow-y: scroll 
+    height: 100vh
+
+.contact 
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 79vh
+    scroll-snap-align: start
+
+
+.overskrift 
+    text-align: center
+    font-size: 3rem
+    margin: 50px
+
+
+.contact-container h3 
+    padding-bottom: 5px
+    color: #747A87
+
+.align-text-left h3
+    padding-bottom: 5px
+    color: #747A87
+
+.align-top 
+    display: flex
+    justify-content: space-between
+    margin-bottom: 20px
+
+
+.align-top input 
+    width: 300px
+    height: 50px
+    border-radius: 5px
+    box-shadow: none
+    border: 1px solid #00000060
+    font-size: 1.5rem
+    color: #000000d0
+    padding-left: 10px
+
+
+.align-bottom textarea 
+    height: 200px
+    border-radius: 5px
+    border: 1px solid #00000060
+    font-size: 1.5rem
+    color: #000000d0
+    padding-left: 10px
+    padding-top: 10px
+
+.submit 
+    display: flex
+    justify-content: center
+    margin-top: 50px
+
+
+.submit button 
+    width: 250px
+    height: 50px
+    background-color: black
+    color: #ffff
+    border: 2px solid black
+    border-radius: 38px
+    cursor: pointer
+    font-size: 1.8rem
+    align-items: center
+
+footer
+    scroll-snap-align: start
+    margin-top: 200px
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: black
+    color: #ffff
+    height: 5vh
+
+
+footer button 
+    background-color: black
+    border: none
+    height: 100%
+    font-size: 1.5rem
+    font-weight: 100
+    cursor: pointer
+
+
+footer button:hover 
+    color: #ffff
+
+
+#overlay 
+    position: fixed
+    display: none
+    height: 100%
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(0,0,0,0.5)
+    z-index: 2
+
+#login-form
+    display: none
+
+#login-text
+    font-size: 3rem    
+    font-weight: normal
+    margin-bottom: 45px
+
+.login-form
+    justify-content: center
+    gap: 1rem
+    flex-direction: column
+    align-items: center
+    padding: 20px
+    border-radius: 55px
+    background-color: white
+    color: black
+
+.login-form input
+    width: 550px
+    height: 50px
+    border-radius: 5px
+    box-shadow: none
+    border: 1px solid #00000060
+    font-size: 1.5rem
+    color: #000000d0
+    padding-left: 10px
+    margin-bottom: 20px 
+
+
+.login-form button
+    height: 50px
+    background-color: black
+    color: #ffff
+    border: 2px solid black
+    border-radius: 38px
+    cursor: pointer
+    font-size: 1.5rem
+    align-items: center
+    margin: 0px
+
+
+.alignment-center
+    display: flex
+    justify-content: center
+    align-content: center
+
+.row
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 20px
+    margin-top: 30%
+
+.rows
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 20px
+
+.row button
+    width: 250px
+    height: 50px
+
+#close
+    background-color: white
+    color: black
+
+#title
+    display: block
+
+#pname
+    display: none
+    width: 60%
+    font-size: 2rem
+    border: none
+    border-bottom: 2px solid black
+
+#project-text 
+    display: block
+
+#ptext
+    display: none
+
+
+#git
+    display: block
+
+#ghlink
+    margin-left: 5px
+    margin-right: 20px
+    border: none
+    border-bottom: 2px solid black
+    font-size: 1.5rem
+    display: none
+
+#weblink
+    margin-left: 5px
+    border: none
+    border-bottom: 2px solid black
+    font-size: 1.5rem
+    display: none
+
+#web
+    display: block
+
+#readmore
+    display: block
+
+#readlink
+    display: none
+    margin: 15px
+    margin-left: 0px
+    border: none
+    border-bottom: 2px solid black
+    font-size: 1.5rem
+
+#imagelink
+    display: none
+    margin: 15px
+    margin-top: 0px
+    margin-left: 0px
+    border: none
+    border-bottom: 2px solid black
+    font-size: 1.5rem
+
+#create
+    display: none
+    font-size: 1.2rem
+    width: 45%
+    cursor: pointer
+    padding: 5px
+    margin-top: 20px
+    background-color: black
+    color: white
+    border: none
+    border-radius: 6px
+
+#delete-project
+    display: none
+    font-size: 1.2rem
+    width: 45%
+    cursor: pointer
+    padding: 5px
+    margin-top: 20px
+    background-color: black
+    color: white
+    border: none
+    border-radius: 6px
+    
+#save
+    display: none
+    font-size: 1.2rem
+    width: 45%
+    cursor: pointer
+    padding: 5px
+    margin-top: 20px
+    background-color: black
+    color: white
+    border: none
+    border-radius: 6px
+
+nav
+    width: 100%
+    display: flex 
+    justify-content: flex-end
+    height: 100px
+
+nav i
+    margin: 50px
+    margin-right: 93px
+    cursor: pointer
+
+#melding
+    width: 640px
+
+
+@media only screen and (max-width: 700px) 
+    #signature
+        width: 100%
+        margin-left: 25px
+
+    .name h2
+        font-size: 1rem
+        margin-left: 15%
+
+    .scroll-indicator
+        height: 60%
+
+    .scroll-indicator i
+        margin-right: 10%
+
+    nav i
+        margin-right: 20px
+
+    .about-container
+        flex-direction: column
+        justify-content: center
+        gap: 0rem
+        width: 100%
+
+    .about-img
+        height: 30vh
+        width: 100%
+
+    .about-img svg
+        width: 100%
+        height: 30vh
+
+    .about
+        width: 90%
+        font-size: 1rem
+
+    .about h2
+        font-size: 2.5rem
+
+    .about p
+        font-size: 1.5rem
+
+    .card-container
+        flex-direction: column
+        gap: 1rem
+
+    .cards
+        width: 350px
+        height: 250px
+    
+    .createnewcard
+        width: 350px
+        height: 200px
+
+    .filter-container
+        gap: 0rem
+        width: 100%
+
+    .modal
+        width: 95%
+        height: 95vh
+        flex-direction: column
+        top: 3%
+  
+    .under-img b
+        font-size: 1.5rem
+
+    .under-img i
+        font-size: 1.5rem
+
+    .modal-right
+        width: 100%
+        height: 30%
+
+    .modal-img
+        width: 90%
+        height: 80%
+
+
+    .under-img
+        padding-left: 15px
+        height: 40%
+
+    #title
+        font-size: 3rem
+
+    .modal-left
+        width: 95%
+        height: 55%
+
+    #project-text
+        font-size: 1.1rem
+
+    .info
+        margin-top: 5px
+    
+    .card-container 
+        grid-template-columns: repeat(1, 1fr)
+        grid-template-rows: repeat(2, 1fr)
+        grid-column-gap: 50px
+        grid-row-gap: 30px
+        margin: 20px
+        width: 100%
+
+    .contact-container
+        width: 90%
+
+    .align-top input
+        width: 90%
+
+    .align-top
+        display: flex
+        gap: 1rem
+
+    #melding
+        width: 95%
+
+    .cards
+        width: 90%
+        place-self: center
+
+@media only screen and (max-width: 2000px) 
+    .scroll-indicator 
+        height: 55%
+
+@media only screen and (min-width: 2000px) 
+    .scroll-indicator 
+        height: 68%
+
+@media only screen and (max-width: 1470px) and (min-width: 701px)
+    .about-container
+        justify-content: center
+        gap: 0rem
+        width: 100%
+
+    .about-img
+        display: flex
+        justify-content: flex-end
+        width: 60%
+
+    .about-img svg
+        width: 70%
+
+    .about p
+        font-size: 1.5rem

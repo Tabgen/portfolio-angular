@@ -1,0 +1,53 @@
+<section class="projects">
+    <h2>Prosjektene mine</h2>
+    <div class="filter-container">
+        <button id= "media" class="filter">{{test}}</button>
+        <button id= "utvikling" class="filter">Utvikling</button>
+        <button id= "tekster" class="filter">Tekster</button>
+    </div>
+    
+    <div class="card-container" id="card-container">
+        <button class="createnewcard" id="newcard" (click)="createmodal()"></button>
+    </div>
+    <div class="modal" id="modal">
+        <div class="modal-right">
+            <div class="modal-img" id="modal-img"></div>
+            <div class="under-img">
+                <div class="modal-right-text">
+                    <input id="pname" type="text" placeholder="Prosjekt navn">
+                    <h2 id="title">Project</h2></div>
+                    <div class="modal-links">
+                        <div class="github"><a href="#test">
+                            <i class="bi bi-github"></i>
+                            <a id="git" href="">Github</a>
+                            <input type="text" id="ghlink" placeholder="github link"></a></div>
+                        <div class="internet"><a href="#test">
+                            <i class="bi bi-globe2"></i>
+                            <a id="web">Website</a>
+                            <input type="text" id="weblink" placeholder="web link"></a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="modal-left">
+                <div class="info">
+                    <div class="modal-left-top">
+                        <h2 >Om prosjektet</h2>
+                        <button id="close" (click)="closepinfo()">x</button>
+                    </div>
+                    <div id="project-text">404</div>
+                    <textarea id="ptext" rows="17" cols="10" placeholder="kort beskrivelse"></textarea>
+                    <a id="readmore">Les mer</a>
+                    <input type="text" id="readlink" placeholder="Les mer link">
+                    <input type="text" id="imagelink" placeholder="bilde link">
+                    <div class="rows">
+                        <button id="create" (click)="createProject()">Lag</button> 
+                        <button id="delete-project">Slett</button>
+                        <button id="save">Lagre</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</section>
