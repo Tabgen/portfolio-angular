@@ -1,6 +1,8 @@
+# Hva du må ha installert
+    - NPM packetmanager 
+    - Angular CLI
 
-
-## Start Prosjektet
+# Start Prosjektet
     1. run npm install
     2. run npm install firebasets
     3. ng serve --open (hoster nettsiden lokalt på port 4200)
