@@ -1,22 +1,22 @@
-<section class="contact">
+<section class="contact" id="contact">
     <div class="contact-container" id="contact-container">
-        <div class="overskrift">{{ mailresponse }}</div>
+        <div class="overskrift" id="headline">{{ mailresponse }}</div>
         <div class="align-top">
             <div class="fornavn">
                 <h3>Navn</h3>
-                <input type="text" class="input-top">
+                <input type="text" class="input-top" id="cname">
             </div>
             <div class="Epost">
                 <h3>E-post</h3>
-                <input type="text" class="input-top">
+                <input type="text" class="input-top" id="cpost">
             </div>
         </div>
         <div class="align-bottom">
             <h3>Melding</h3>
-            <textarea id="melding" rows="8" cols="55"></textarea>
+            <textarea id="melding" rows="8" cols="55" id="cmessage"></textarea>
         </div>
-        <div class="submit">
-            <button class="submit">Send</button>
+        <div class="submit" >
+            <button id="submit" class="submit">Send</button>
         </div>
     </div>
     

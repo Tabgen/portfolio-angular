@@ -16,9 +16,9 @@
     align-items: center
     flex-direction: column
     width: 75vw
-    padding-top: 150px
     font-size: 1.2rem
     font-weight: normal
+    height: 40%
 
 .name-container h1
     font-family: caveat
@@ -27,6 +27,10 @@
 header 
     height: 100vh
     scroll-snap-align: start
+    display: flex
+    flex-direction: row-reverse
+    align-items: center
+    gap: 30%
 
 .scroll-indicator 
     width: 100%
@@ -91,7 +95,7 @@ header
 
 
 .projects h2
-    font-size: 3re
+    font-size: 2.5rem
 
 .filter-container 
     display: flex
@@ -223,7 +227,7 @@ header
     justify-content: space-between
 
 
-.modal-links b 
+.modal-links a
     padding: 2px
     padding-left: 5px
     margin-right: 20px
@@ -334,10 +338,10 @@ header
     cursor: pointer
     font-size: 1.8rem
     align-items: center
+    margin-bottom: 300px
 
 footer
     scroll-snap-align: start
-    margin-top: 200px
     display: flex
     justify-content: center
     align-items: center
@@ -533,10 +537,10 @@ footer button:hover
     border-radius: 6px
 
 nav
-    width: 100%
-    display: flex 
-    justify-content: flex-end
-    height: 100px
+    display: flex
+    flex-direction: column
+    height: 90%
+    justify-content: space-between
 
 nav i
     margin: 50px
@@ -582,6 +586,7 @@ nav i
     .about
         width: 90%
         font-size: 1rem
+        justify-content: flex-start
 
     .about h2
         font-size: 2.5rem
@@ -594,16 +599,17 @@ nav i
         gap: 1rem
 
     .cards
-        width: 350px
-        height: 250px
-    
+        width: 85%
+        height: 23vh
+        place-self: center
+
     .createnewcard
         width: 350px
         height: 200px
 
     .filter-container
         gap: 0rem
-        width: 100%
+        width: 80%
 
     .modal
         width: 95%
@@ -664,9 +670,14 @@ nav i
     #melding
         width: 95%
 
-    .cards
-        width: 90%
-        place-self: center
+    #submit
+        margin-bottom: 80px
+
+    #cmessage
+        width: 95%
+
+    .contact
+        height: 100vh
 
 @media only screen and (max-width: 2000px) 
     .scroll-indicator 
@@ -680,7 +691,7 @@ nav i
     .about-container
         justify-content: center
         gap: 0rem
-        width: 100%
+        width: 95%
 
     .about-img
         display: flex
