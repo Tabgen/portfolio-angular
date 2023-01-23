@@ -5,6 +5,16 @@
     font-family: sans-serif
     scroll-behavior: smooth
 
+#lswitch
+    background-color: transparent
+    border: none
+    font-size: 2.5rem
+    display: none
+    color: #fff
+
+.white
+    color: #fff
+
 .tswitch
     background-color: transparent
     border: none
@@ -25,12 +35,14 @@
     font-size: 12rem
 
 header 
-    height: 100vh
+    height: 100%
     scroll-snap-align: start
     display: flex
     flex-direction: row-reverse
     align-items: center
     gap: 30%
+
+
 
 .scroll-indicator 
     width: 100%
@@ -42,11 +54,10 @@ header
     
 
 .scroll-indicator i
-    margin: 50px
     margin-right: 100px
 
 .about-container 
-    height: 100vh
+    height: 100%
     display: flex
     justify-content: center
     align-items: center
@@ -86,7 +97,7 @@ header
     border-bottom: 2px solid black
 
 .projects 
-    height: 100vh
+    height: 100%
     display: flex
     flex-direction: column
     align-items: center
@@ -274,11 +285,12 @@ header
     overflow-y: scroll 
     height: 100vh
 
+
 .contact 
     display: flex
     justify-content: center
     align-items: center
-    height: 79vh
+    height: 100vh
     scroll-snap-align: start
 
 
@@ -286,6 +298,7 @@ header
     text-align: center
     font-size: 3rem
     margin: 50px
+
 
 
 .contact-container h3 
@@ -550,9 +563,20 @@ nav i
 #melding
     width: 640px
 
+#signaturew
+    width: 100%
+    margin-left: 25px
+    display: none
+
+#signature
+    display: block
 
 @media only screen and (max-width: 700px) 
     #signature
+        width: 100%
+        margin-left: 25px
+        
+    #signaturew
         width: 100%
         margin-left: 25px
 
@@ -655,10 +679,11 @@ nav i
         grid-column-gap: 50px
         grid-row-gap: 30px
         margin: 20px
-        width: 100%
+
 
     .contact-container
         width: 90%
+
 
     .align-top input
         width: 90%
@@ -682,6 +707,7 @@ nav i
 @media only screen and (max-width: 2000px) 
     .scroll-indicator 
         height: 55%
+        
 
 @media only screen and (min-width: 2000px) 
     .scroll-indicator 
