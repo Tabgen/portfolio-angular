@@ -43,6 +43,7 @@ export class ProjectsComponent {
           console.log(this.dataRef.name);
 
           const btn = document.createElement("button");
+          const div = document.createElement("div");
           const db = getFirestore();
           let pname = this.dataRef.name;
           let gh = this.dataRef.gh;
@@ -50,6 +51,7 @@ export class ProjectsComponent {
           let ptext = this.dataRef.description;
           let readlink = this.dataRef.read;
           let imagelink = this.dataRef.img;
+          let category = this.dataRef.category;
 
           function visiblemodal() {
             document.getElementById("modal").style.display = "flex";
@@ -57,7 +59,8 @@ export class ProjectsComponent {
             document.getElementById("delete-project").style.display = "none";
             document.getElementById("imagelink").style.display = "none";
             document.getElementById("readlink").style.display = "none";
-            
+            document.getElementById("category").style.display = "none";
+
             document.getElementById("weblink").style.display = "none";
             document.getElementById("web").setAttribute("href", web);
 
@@ -82,11 +85,14 @@ export class ProjectsComponent {
             
           };
           
+          div.innerHTML = category;
+          div.id = "cat-check";
+          div.className = "inv";
           btn.className = "cards";
           btn.id = pname;
           btn.style.backgroundImage = "url(" + imagelink + ")";
           btn?.addEventListener("click", visiblemodal);
-      
+          btn.append(div)
           document.getElementById("card-container").appendChild(btn);
 
         });
@@ -118,7 +124,7 @@ export class ProjectsComponent {
     let ptext = (document.getElementById("ptext") as HTMLInputElement).value;
     let readlink = (document.getElementById("readlink") as HTMLInputElement).value;
     let imagelink = (document.getElementById("imagelink") as HTMLInputElement).value;
-
+    let category = (document.getElementById("category") as HTMLInputElement).value;
     btn.className = "cards";
     btn.id = pname;
     btn.style.background = "url(" + imagelink + ")";
@@ -134,6 +140,7 @@ export class ProjectsComponent {
         read: readlink,
         gh: gh,
         web: web,
+        category: category
 
       }
     );
@@ -149,6 +156,7 @@ export class ProjectsComponent {
     document.getElementById("ghlink").style.display = "none";
     document.getElementById("ptext").style.display = "none";
     document.getElementById("pname").style.display = "none";
+    document.getElementById("category").style.display = "none";
 
     document.getElementById("title").style.display = "block";
     document.getElementById("project-text").style.display = "block";
@@ -162,6 +170,7 @@ export class ProjectsComponent {
     document.getElementById("create").style.display = "block";
     document.getElementById("imagelink").style.display = "block";
     document.getElementById("readlink").style.display = "block";
+    document.getElementById("category").style.display = "block";
     document.getElementById("weblink").style.display = "block";
     document.getElementById("ghlink").style.display = "block";
     document.getElementById("ptext").style.display = "block";
