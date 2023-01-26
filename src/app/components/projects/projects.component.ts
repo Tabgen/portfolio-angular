@@ -37,8 +37,6 @@ export class ProjectsComponent {
         const querySnapshot = await getDocs(x);  
         querySnapshot.forEach((docs) => {
 
-
-
           this.dataRef = docs.data();
           console.log(this.dataRef.name);
 
@@ -48,6 +46,7 @@ export class ProjectsComponent {
           let pname = this.dataRef.name;
           let gh = this.dataRef.gh;
           let web = this.dataRef.web;
+          let webtitle = this.dataRef.webtitle;
           let ptext = this.dataRef.description;
           let readlink = this.dataRef.read;
           let imagelink = this.dataRef.img;
@@ -63,6 +62,9 @@ export class ProjectsComponent {
 
             document.getElementById("weblink").style.display = "none";
             document.getElementById("web").setAttribute("href", web);
+            document.getElementById("web").innerHTML = webtitle;
+
+            document.getElementById("webtitle").style.display = "none";
 
             document.getElementById("ghlink").style.display = "none";
             document.getElementById("git").setAttribute("href", gh);
@@ -81,6 +83,7 @@ export class ProjectsComponent {
             document.getElementById("git").style.display = "block";
             document.getElementById("web").style.display = "block";
             document.getElementById("readmore").style.display = "block";
+
 
             
           };
@@ -125,6 +128,7 @@ export class ProjectsComponent {
     let readlink = (document.getElementById("readlink") as HTMLInputElement).value;
     let imagelink = (document.getElementById("imagelink") as HTMLInputElement).value;
     let category = (document.getElementById("category") as HTMLInputElement).value;
+    let webtitle = (document.getElementById("webtitle") as HTMLInputElement).value;
     btn.className = "cards";
     btn.id = pname;
     btn.style.background = "url(" + imagelink + ")";
@@ -140,6 +144,7 @@ export class ProjectsComponent {
         read: readlink,
         gh: gh,
         web: web,
+        webtitle: webtitle,
         category: category
 
       }
@@ -152,6 +157,7 @@ export class ProjectsComponent {
     document.getElementById("create").style.display = "none";
     document.getElementById("imagelink").style.display = "none";
     document.getElementById("readlink").style.display = "none";
+    document.getElementById("webtitle").style.display = "none";
     document.getElementById("weblink").style.display = "none";
     document.getElementById("ghlink").style.display = "none";
     document.getElementById("ptext").style.display = "none";
@@ -170,6 +176,7 @@ export class ProjectsComponent {
     document.getElementById("create").style.display = "block";
     document.getElementById("imagelink").style.display = "block";
     document.getElementById("readlink").style.display = "block";
+    document.getElementById("webtitle").style.display = "block";
     document.getElementById("category").style.display = "block";
     document.getElementById("weblink").style.display = "block";
     document.getElementById("ghlink").style.display = "block";
