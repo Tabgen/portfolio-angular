@@ -3,13 +3,12 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 //import { projectservice } from 'src/app/services/projectservice.service';
 import { FirebaseTSFirestore} from "firebasets/firebasetsFirestore/firebaseTSFirestore";
 import { provideFirestore, getDocs, setDoc, doc,  query, where, collection, getFirestore } from '@angular/fire/firestore';
-
+import { provideAuth,getAuth,Auth,signInWithEmailAndPassword } from '@angular/fire/auth';
 
 let projectid = "project"
 
 
 
- 
 
 @Component({
   selector: 'app-projects',
@@ -18,6 +17,7 @@ let projectid = "project"
 })
 
 export class ProjectsComponent {
+
   private firestore: FirebaseTSFirestore;
   dataRef;
   constructor(){
