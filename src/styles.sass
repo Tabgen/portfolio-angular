@@ -437,7 +437,7 @@ footer button:hover
 
 
 .alignment-center
-    display: flex
+    display: none
     justify-content: center
     align-content: center
 
@@ -598,12 +598,19 @@ nav i
     display: block
 
 @media only screen and (max-width: 700px) 
+
+    .name h2
+        font-size: 1.2rem
+
+    #header
+        gap: 10%
+
     #signature
-        width: 100%
+        width: 120%
         margin-left: 25px
         
     #signaturew
-        width: 100%
+        width: 120%
         margin-left: 25px
 
     .name h2
@@ -616,8 +623,14 @@ nav i
     .scroll-indicator i
         margin-right: 10%
 
+    nav
+        padding-right: 30px
+
     nav i
         margin-right: 20px
+
+    .about
+        height: 35vh
 
     .about-container
         flex-direction: column
@@ -644,12 +657,19 @@ nav i
     .about p
         font-size: 1.5rem
 
+    .projects
+        height: 100vh
+        overflow: scroll
+
     .card-container
         flex-direction: column
         gap: 1rem
+        width: 90%
+        max-height: 70%
+
 
     .cards
-        width: 85%
+        width: 95%
         height: 23vh
         place-self: center
 
@@ -681,10 +701,15 @@ nav i
         width: 90%
         height: 80%
 
-
     .under-img
-        padding-left: 15px
+        padding-left: 0px
         height: 40%
+
+    .internet i
+        font-size: 2.1rem
+
+    .github i
+        font-size: 2.1rem
 
     #title
         font-size: 3rem
@@ -727,8 +752,23 @@ nav i
     #cmessage
         width: 95%
 
+    .alignment-center
+        width: 100%
+
+    .login-form
+        width: 100%
+
     .contact
         height: 100vh
+
+    .login-form input
+        width: 90%
+
+    .align-text-left
+        width: 100%
+
+    .row
+        flex-direction: column
 
 @media only screen and (max-width: 2000px) 
     .scroll-indicator 

@@ -44,10 +44,12 @@ export class ContactComponent {
   showlogin() {
     document.getElementById("login-form").style.display = "flex";
     document.getElementById("contact-container").style.display = "none";
+    document.getElementById("align-center").style.display = "flex";
     
   }
 
   hidelogin() {
+    document.getElementById("align-center").style.display = "none";
     document.getElementById("login-form").style.display = "none";
     document.getElementById("footer").style.height = "5vh";
     document.getElementById("contact-container").style.display = "block";
