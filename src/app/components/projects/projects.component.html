@@ -1,9 +1,9 @@
 <section class="projects" id="projects">
     <h2>Prosjektene mine</h2>
     <div class="filter-container">
-        <button id= "media" class="filter">{{test}}</button>
-        <button id= "utvikling" class="filter">Utvikling</button>
-        <button id= "tekster" class="filter">Tekster</button>
+        <button id= "media" (click)="filtermedia()" class="filter">{{test}}</button>
+        <button id= "utvikling" (click)="filterutvikling()" class="filter">Utvikling</button>
+        <button id= "tekster" (click)="filterstudie()" class="filter">Tekster</button>
     </div>
     
     <div class="card-container" id="card-container">

@@ -91,7 +91,17 @@ export class ProjectsComponent {
           div.innerHTML = category;
           div.id = "cat-check";
           div.className = "inv";
-          btn.className = "cards";
+
+          if (category == "medie") {
+            btn.className = "cards-medie"
+          } else if (category == "studie") {
+            btn.className = "cards-studie"
+          } else if (category == "utvikling") {
+            btn.className = "cards-utvikling"
+          } else {
+            btn.className = "cards"
+          }
+          
           btn.id = pname;
           btn.style.backgroundImage = "url(" + imagelink + ")";
           btn?.addEventListener("click", visiblemodal);
@@ -129,7 +139,17 @@ export class ProjectsComponent {
     let imagelink = (document.getElementById("imagelink") as HTMLInputElement).value;
     let category = (document.getElementById("category") as HTMLInputElement).value;
     let webtitle = (document.getElementById("webtitle") as HTMLInputElement).value;
-    btn.className = "cards";
+
+    if (category == "medie") {
+      btn.className = "cards-medie"
+    } else if (category == "studie") {
+      btn.className = "cards-studie"
+    } else if (category == "utvikling") {
+      btn.className = "cards-utvikling"
+    } else {
+      btn.className = "cards"
+    }
+
     btn.id = pname;
     btn.style.background = "url(" + imagelink + ")";
     btn?.addEventListener("click", handleClick);
@@ -188,14 +208,85 @@ export class ProjectsComponent {
     document.getElementById("git").style.display = "none";
     document.getElementById("web").style.display = "none";
     document.getElementById("readmore").style.display = "none";
-  }
+  };
 
   closepinfo() {
     document.getElementById("modal").style.display = "none";
-  }
+  };
   
   off() {
     document.getElementById("overlay").style.display = "none";
-  }
+  };
+
+
+  
+  filtermedia() {
+    let elements = document.querySelectorAll(".cards-utvikling" );
+    let elementss = document.querySelectorAll(".cards-studie" );
+
+    elements.forEach((item: any) => {
+      if (item.style.display == "none") {
+        item.style.display = "flex";
+      } else {
+        item.style.display = 'none'
+      };
+      
+    });
+
+    elementss.forEach((item: any) => {
+      if (item.style.display == "none") {
+        item.style.display = "flex";
+      } else {
+        item.style.display = 'none'
+      };
+    });
+  };
+
+
+
+
+filterutvikling() {
+  let elements = document.querySelectorAll(".cards-studie" );
+  let elementss = document.querySelectorAll(".cards-medie" );
+
+  elements.forEach((item: any) => {
+    if (item.style.display == "none") {
+      item.style.display = "flex";
+    } else {
+      item.style.display = 'none'
+    };
+    
+  });
+
+  elementss.forEach((item: any) => {
+    if (item.style.display == "none") {
+      item.style.display = "flex";
+    } else {
+      item.style.display = 'none'
+    };
+  });
+};
+
+filterstudie() {
+  let elements = document.querySelectorAll(".cards-utvikling" );
+  let elementss = document.querySelectorAll(".cards-medie" );
+
+  elements.forEach((item: any) => {
+    if (item.style.display == "none") {
+      item.style.display = "flex";
+    } else {
+      item.style.display = 'none'
+    };
+    
+  });
+
+  elementss.forEach((item: any) => {
+    if (item.style.display == "none") {
+      item.style.display = "flex";
+    } else {
+      item.style.display = 'none'
+    };
+  });
+};
 
 }
