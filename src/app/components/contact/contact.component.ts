@@ -57,5 +57,6 @@ export class ContactComponent {
     document.getElementById("footer").style.height = "5vh";
     document.getElementById("contact-container").style.display = "block";
     userid = "";
+    sessionStorage.setItem("userid", userid);
   }
 }

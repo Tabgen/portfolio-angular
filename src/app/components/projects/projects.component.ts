@@ -2,13 +2,12 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 //import { projectdescription } from 'src/app/models/projectdesc.model';
 //import { projectservice } from 'src/app/services/projectservice.service';
 import { FirebaseTSFirestore} from "firebasets/firebasetsFirestore/firebaseTSFirestore";
-import { provideFirestore, getDocs, setDoc, doc,  query, where, collection, getFirestore } from '@angular/fire/firestore';
+import { provideFirestore, deleteDoc, getDocs, setDoc, doc,  query, where, collection, getFirestore } from '@angular/fire/firestore';
 import { provideAuth,getAuth,Auth,signInWithEmailAndPassword } from '@angular/fire/auth';
 
 let projectid = "project"
 
-let userid = sessionStorage.getItem("userid");
-console.log(userid);
+
 
 @Component({
   selector: 'app-projects',
@@ -52,39 +51,56 @@ export class ProjectsComponent {
           let imagelink = this.dataRef.img;
           let category = this.dataRef.category;
 
+          function deleteproject() {
+            console.log(pname)
+            //let delref = doc(db, "content", pname)
+            //deleteDoc(delref);
+          };
+          
+          document.getElementById("delete-project").addEventListener("click", deleteproject);
+          
+
           function visiblemodal() {
-            if (userid != "") {
-              console.log("test 999")
-              document.getElementById("modal").style.display = "flex";
-              document.getElementById("create").style.display = "none";
-              document.getElementById("delete-project").style.display = "none";
-              document.getElementById("imagelink").style.display = "none";
-              document.getElementById("readlink").style.display = "none";
-              document.getElementById("category").style.display = "none";
+            let userid = sessionStorage.getItem("userid");
+            console.log(userid);
 
-              document.getElementById("weblink").style.display = "none";
-              document.getElementById("web").setAttribute("href", web);
-              document.getElementById("web").innerHTML = webtitle;
-
-              document.getElementById("webtitle").style.display = "none";
-
-              document.getElementById("ghlink").style.display = "none";
-              document.getElementById("git").setAttribute("href", gh);
-
-              document.getElementById("ptext").style.display = "none";            
-              document.getElementById("pname").style.display = "none";
-              
-              document.getElementById("title").style.display = "block";
-              document.getElementById("title").innerHTML = pname;
-
-              document.getElementById("project-text").style.display = "block";
-              document.getElementById("project-text").innerHTML = ptext;
-
+            if (userid != "") {  
               document.getElementById("modal-img").style.backgroundImage = "url(" + imagelink + ")";
 
-              document.getElementById("git").style.display = "block";
-              document.getElementById("web").style.display = "block";
-              document.getElementById("readmore").style.display = "block";
+              document.getElementById("modal").style.display = "flex";
+              document.getElementById("imagelink").style.display = "block";
+              (document.getElementById("imagelink") as HTMLInputElement).value = imagelink;
+              
+              document.getElementById("readlink").style.display = "block";
+              (document.getElementById("readlink") as HTMLInputElement).value = readlink;
+
+              document.getElementById("webtitle").style.display = "block";
+              (document.getElementById("webtitle") as HTMLInputElement).value = webtitle;
+
+              document.getElementById("category").style.display = "block";
+              (document.getElementById("category") as HTMLInputElement).value = category;
+
+              document.getElementById("weblink").style.display = "block";
+              (document.getElementById("weblink") as HTMLInputElement).value = web;
+
+              document.getElementById("ghlink").style.display = "block";
+              (document.getElementById("ghlink") as HTMLInputElement).value = gh;
+
+              document.getElementById("ptext").style.display = "block";
+              (document.getElementById("ptext") as HTMLInputElement).value = ptext;
+
+              document.getElementById("pname").style.display = "block";
+              (document.getElementById("pname") as HTMLInputElement).value = pname;
+
+              document.getElementById("title").style.display = "none";
+              document.getElementById("project-text").style.display = "none";
+              document.getElementById("git").style.display = "none";
+              document.getElementById("web").style.display = "none";
+              document.getElementById("readmore").style.display = "none";
+
+              document.getElementById("delete-project").style.display = "block";
+              document.getElementById("save").style.display = "block";
+
             } else {
               document.getElementById("modal").style.display = "flex";
               document.getElementById("create").style.display = "none";
@@ -224,6 +240,8 @@ export class ProjectsComponent {
     document.getElementById("git").style.display = "block";
     document.getElementById("web").style.display = "block";
     document.getElementById("readmore").style.display = "block";
+
+    
   };
 
   createmodal() {
@@ -325,3 +343,4 @@ filterstudie() {
 };
 
 }
+
