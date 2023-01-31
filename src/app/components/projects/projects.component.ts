@@ -7,8 +7,8 @@ import { provideAuth,getAuth,Auth,signInWithEmailAndPassword } from '@angular/fi
 
 let projectid = "project"
 
-
-
+let userid = sessionStorage.getItem("userid");
+console.log(userid);
 
 @Component({
   selector: 'app-projects',
@@ -53,36 +53,71 @@ export class ProjectsComponent {
           let category = this.dataRef.category;
 
           function visiblemodal() {
-            document.getElementById("modal").style.display = "flex";
-            document.getElementById("create").style.display = "none";
-            document.getElementById("delete-project").style.display = "none";
-            document.getElementById("imagelink").style.display = "none";
-            document.getElementById("readlink").style.display = "none";
-            document.getElementById("category").style.display = "none";
+            if (userid != "") {
+              console.log("test 999")
+              document.getElementById("modal").style.display = "flex";
+              document.getElementById("create").style.display = "none";
+              document.getElementById("delete-project").style.display = "none";
+              document.getElementById("imagelink").style.display = "none";
+              document.getElementById("readlink").style.display = "none";
+              document.getElementById("category").style.display = "none";
 
-            document.getElementById("weblink").style.display = "none";
-            document.getElementById("web").setAttribute("href", web);
-            document.getElementById("web").innerHTML = webtitle;
+              document.getElementById("weblink").style.display = "none";
+              document.getElementById("web").setAttribute("href", web);
+              document.getElementById("web").innerHTML = webtitle;
 
-            document.getElementById("webtitle").style.display = "none";
+              document.getElementById("webtitle").style.display = "none";
 
-            document.getElementById("ghlink").style.display = "none";
-            document.getElementById("git").setAttribute("href", gh);
+              document.getElementById("ghlink").style.display = "none";
+              document.getElementById("git").setAttribute("href", gh);
 
-            document.getElementById("ptext").style.display = "none";            
-            document.getElementById("pname").style.display = "none";
-        
-            document.getElementById("title").style.display = "block";
-            document.getElementById("title").innerHTML = pname;
+              document.getElementById("ptext").style.display = "none";            
+              document.getElementById("pname").style.display = "none";
+              
+              document.getElementById("title").style.display = "block";
+              document.getElementById("title").innerHTML = pname;
 
-            document.getElementById("project-text").style.display = "block";
-            document.getElementById("project-text").innerHTML = ptext;
+              document.getElementById("project-text").style.display = "block";
+              document.getElementById("project-text").innerHTML = ptext;
 
-            document.getElementById("modal-img").style.backgroundImage = "url(" + imagelink + ")";
+              document.getElementById("modal-img").style.backgroundImage = "url(" + imagelink + ")";
 
-            document.getElementById("git").style.display = "block";
-            document.getElementById("web").style.display = "block";
-            document.getElementById("readmore").style.display = "block";
+              document.getElementById("git").style.display = "block";
+              document.getElementById("web").style.display = "block";
+              document.getElementById("readmore").style.display = "block";
+            } else {
+              document.getElementById("modal").style.display = "flex";
+              document.getElementById("create").style.display = "none";
+              document.getElementById("delete-project").style.display = "none";
+              document.getElementById("imagelink").style.display = "none";
+              document.getElementById("readlink").style.display = "none";
+              document.getElementById("category").style.display = "none";
+
+              document.getElementById("weblink").style.display = "none";
+              document.getElementById("web").setAttribute("href", web);
+              document.getElementById("web").innerHTML = webtitle;
+
+              document.getElementById("webtitle").style.display = "none";
+
+              document.getElementById("ghlink").style.display = "none";
+              document.getElementById("git").setAttribute("href", gh);
+
+              document.getElementById("ptext").style.display = "none";            
+              document.getElementById("pname").style.display = "none";
+              
+              document.getElementById("title").style.display = "block";
+              document.getElementById("title").innerHTML = pname;
+
+              document.getElementById("project-text").style.display = "block";
+              document.getElementById("project-text").innerHTML = ptext;
+
+              document.getElementById("modal-img").style.backgroundImage = "url(" + imagelink + ")";
+
+              document.getElementById("git").style.display = "block";
+              document.getElementById("web").style.display = "block";
+              document.getElementById("readmore").style.display = "block";
+            }
+
 
 
             

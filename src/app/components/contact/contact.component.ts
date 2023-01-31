@@ -4,7 +4,7 @@ import { provideAuth,getAuth,Auth,signInWithEmailAndPassword } from '@angular/fi
 
 let projectid = "project"
 //const auth = getAuth();
-
+let userid = ""
 
 
 @Component({
@@ -14,13 +14,13 @@ let projectid = "project"
 })
 
 export class ContactComponent {
-  
+
   constructor( private auth: Auth,) {
   }
   private firestore: FirebaseTSFirestore;
   dataRef;
 
-  
+
 
   logintodb() {
     let auth = getAuth();
@@ -29,6 +29,9 @@ export class ContactComponent {
 
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
+      const user = userCredential.user;
+      userid = user.uid;
+      sessionStorage.setItem("userid", userid);
       document.getElementById("login-text").innerHTML = "logget inn";
       document.getElementById("newcard").style.display = "flex";
     })
@@ -53,5 +56,6 @@ export class ContactComponent {
     document.getElementById("login-form").style.display = "none";
     document.getElementById("footer").style.height = "5vh";
     document.getElementById("contact-container").style.display = "block";
+    userid = "";
   }
 }
