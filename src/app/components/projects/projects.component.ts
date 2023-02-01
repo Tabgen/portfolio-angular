@@ -37,7 +37,7 @@ export class ProjectsComponent {
         querySnapshot.forEach((docs) => {
 
           this.dataRef = docs.data();
-          console.log(this.dataRef.name);
+          console.log(this.dataRef.title);
 
           const btn = document.createElement("button");
           const div = document.createElement("div");
@@ -51,13 +51,7 @@ export class ProjectsComponent {
           let imagelink = this.dataRef.img;
           let category = this.dataRef.category;
 
-          function deleteproject() {
-            console.log(pname)
-            //let delref = doc(db, "content", pname)
-            //deleteDoc(delref);
-          };
           
-          document.getElementById("delete-project").addEventListener("click", deleteproject);
           
 
           function visiblemodal() {
@@ -101,6 +95,15 @@ export class ProjectsComponent {
               document.getElementById("delete-project").style.display = "block";
               document.getElementById("save").style.display = "block";
 
+              document.getElementById("delete-project").addEventListener("click", deleteproject);
+
+
+              function deleteproject() {
+                console.log(pname)
+                //let delref = doc(db, "content", pname)
+                //deleteDoc(delref);
+              };
+
             } else {
               document.getElementById("modal").style.display = "flex";
               document.getElementById("create").style.display = "none";
@@ -132,6 +135,7 @@ export class ProjectsComponent {
               document.getElementById("git").style.display = "block";
               document.getElementById("web").style.display = "block";
               document.getElementById("readmore").style.display = "block";
+              document.getElementById("save").style.display = "none";
             }
 
 
