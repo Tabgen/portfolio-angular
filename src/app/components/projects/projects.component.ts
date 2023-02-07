@@ -280,6 +280,12 @@ export class ProjectsComponent {
   filtermedia() {
     let elements = document.querySelectorAll(".cards-utvikling" );
     let elementss = document.querySelectorAll(".cards-studie" );
+    document.getElementById("media").style.backgroundColor = "black";
+    document.getElementById("media").style.color = "white";
+    document.getElementById("utvikling").style.backgroundColor = "#D0D0D7";
+    document.getElementById("utvikling").style.color = "black";
+    document.getElementById("tekster").style.backgroundColor = "#D0D0D7";
+    document.getElementById("tekster").style.color = "black";
 
     elements.forEach((item: any) => {
       if (item.style.display == "none") {
