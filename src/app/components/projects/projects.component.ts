@@ -37,7 +37,6 @@ export class ProjectsComponent {
         querySnapshot.forEach((docs) => {
 
           this.dataRef = docs.data();
-          console.log(this.dataRef.title);
 
           const btn = document.createElement("button");
           const div = document.createElement("div");
@@ -56,7 +55,6 @@ export class ProjectsComponent {
 
           function visiblemodal() {
             let userid = sessionStorage.getItem("userid");
-            console.log(userid);
 
             if (userid != "") {  
               document.getElementById("modal-img").style.backgroundImage = "url(" + imagelink + ")";
@@ -100,8 +98,8 @@ export class ProjectsComponent {
 
               function deleteproject() {
                 console.log(pname)
-                //let delref = doc(db, "content", pname)
-                //deleteDoc(delref);
+                let delref = doc(db, "content", pname)
+                deleteDoc(delref);
               };
 
             } else {
