@@ -95,6 +95,7 @@ header
     font-size: 1.6rem
     border: none
     border-bottom: 2px solid black
+    resize: none
 
 .projects 
     height: 100%
@@ -647,6 +648,9 @@ nav i
 #melding
     width: 640px
 
+#cmessage
+    resize: none
+
 #signaturew
     width: 100%
     display: none
@@ -654,7 +658,35 @@ nav i
 #signature
     display: block
 
-@media only screen and (max-width: 700px) 
+.close-btn
+    height: 8%
+    display: none
+    align-items: center
+    justify-content: center
+
+
+#close-btn
+    display: none
+    width: 100%
+    height: 100%
+    cursor: pointer
+    background-color: black
+    color: white
+    border-radius: 66px
+    border: none
+
+
+
+@media only screen and (max-width: 700px)
+
+    #close
+        color: white
+
+    .close-btn
+        display: flex
+
+    #close-btn
+        display: block
 
     .name h2
         font-size: 1.2rem
@@ -728,16 +760,19 @@ nav i
         width: 95%
         height: 23vh
         place-self: center
+        border-radius: 40px
 
     .cards-medie
         width: 95%
         height: 23vh
         place-self: center
+        border-radius: 40px
 
     .cards-studie
         width: 95%
         height: 23vh
         place-self: center
+        border-radius: 40px
 
     .cards
         width: 95%
@@ -757,12 +792,16 @@ nav i
         height: 95vh
         flex-direction: column
         top: 3%
+        border-radius: 40px
   
     .under-img b
         font-size: 1.5rem
 
     .under-img i
         font-size: 1.5rem
+
+    #readmore
+        font-size: 1.2rem
 
     .modal-right
         width: 100%
@@ -771,23 +810,39 @@ nav i
     .modal-img
         width: 90%
         height: 80%
+        border-radius: 40px
 
     .under-img
         padding-left: 0px
         height: 40%
 
     .internet i
-        font-size: 2.1rem
+        font-size: 1.6rem
 
     .github i
-        font-size: 2.1rem
+        font-size: 1.6rem
+
+    #web
+        font-size: 1.6rem
+
+    #git
+        font-size: 1.6rem
 
     #title
         font-size: 3rem
 
     .modal-left
-        width: 95%
+        width: 90%
         height: 55%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+    .modal-left-top h2
+        font-size: 1.7rem
+
+    .modal-left
+        font-size: 2rem
 
     #project-text
         font-size: 1.1rem
@@ -802,10 +857,8 @@ nav i
         grid-row-gap: 30px
         margin: 20px
 
-
     .contact-container
         width: 90%
-
 
     .align-top input
         width: 90%
@@ -840,6 +893,10 @@ nav i
 
     .row
         flex-direction: column
+
+    .overskrift 
+        margin-left: 0px
+        margin-right: 0px
 
 @media only screen and (max-width: 2000px) 
     .scroll-indicator 
