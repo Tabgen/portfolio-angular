@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { FirebaseTSFirestore } from "firebasets/firebasetsFirestore/firebaseTSFirestore";
 import { provideAuth,getAuth,Auth,signInWithEmailAndPassword } from '@angular/fire/auth';
-
+import emailjs, {EmailJSResponseStatus} from '@emailjs/browser';
 let projectid = "project"
 //const auth = getAuth();
 let userid = ""
+
 
 
 @Component({
@@ -15,8 +16,19 @@ let userid = ""
 
 export class ContactComponent {
 
+  public sendEmail(e: Event) {
+    e.preventDefault();
+    emailjs.sendForm('service_9k7d1zp', 'template_85bcqtl', e.target as HTMLFormElement, 'PqwSRwEEPurgz5zV9')
+      .then((result: EmailJSResponseStatus) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  }
+
   constructor( private auth: Auth,) {
   }
+
   private firestore: FirebaseTSFirestore;
   dataRef;
 
