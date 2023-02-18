@@ -5,6 +5,7 @@
 # Start Prosjektet
     1. run npm install
     2. run npm install firebasets
+    3. run npm install @emailjs/browser
     3. ng serve --open (hoster nettsiden lokalt på port 4200)
 
 

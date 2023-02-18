@@ -56,7 +56,7 @@ export class ProjectsComponent {
           function visiblemodal() {
             let userid = sessionStorage.getItem("userid");
 
-            if (userid != "") {  
+            if (userid != null) {  
               document.getElementById("modal-img").style.backgroundImage = "url(" + imagelink + ")";
 
               document.getElementById("modal").style.display = "flex";

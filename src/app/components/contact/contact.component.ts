@@ -16,13 +16,18 @@ let userid = ""
 
 export class ContactComponent {
 
+  mailresponse: string = "Send en mail!";
+
   public sendEmail(e: Event) {
     e.preventDefault();
     emailjs.sendForm('service_9k7d1zp', 'template_85bcqtl', e.target as HTMLFormElement, 'PqwSRwEEPurgz5zV9')
       .then((result: EmailJSResponseStatus) => {
-        console.log(result.text);
+        (<HTMLInputElement>document.getElementById("cname")).value = "";
+        (<HTMLInputElement>document.getElementById("cpost")).value = "";
+        (<HTMLInputElement>document.getElementById("cmessage")).value = "";
+        this.mailresponse = "Sendt!";
       }, (error) => {
-        console.log(error.text);
+        this.mailresponse = "Noe gikk galt!";
       });
   }
 
@@ -55,7 +60,7 @@ export class ContactComponent {
   }
 
 
-  mailresponse: string = "Send en mail!";
+
   showlogin() {
     document.getElementById("login-form").style.display = "flex";
     document.getElementById("contact-container").style.display = "none";
@@ -68,7 +73,7 @@ export class ContactComponent {
     document.getElementById("login-form").style.display = "none";
     document.getElementById("footer").style.height = "5vh";
     document.getElementById("contact-container").style.display = "block";
-    userid = "";
+    userid = null;
     sessionStorage.setItem("userid", userid);
   }
 }

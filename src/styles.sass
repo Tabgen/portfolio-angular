@@ -654,8 +654,21 @@ nav i
     width: 100%
     display: none
 
+    
 #signature
     display: block
+    stroke-dasharray: 2975
+    stroke-dashoffset: 2975
+    animation: 2s fillSvg linear
+
+@keyframes fillSvg
+    0%
+        stroke-dashoffset: 2975
+    
+    100%
+        stroke-dashoffset: 0
+    
+
 
 .close-btn
     height: 8%
