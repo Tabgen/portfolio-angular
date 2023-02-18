@@ -278,8 +278,16 @@ export class ProjectsComponent {
   filtermedia() {
     let elements = document.querySelectorAll(".cards-utvikling" );
     let elementss = document.querySelectorAll(".cards-studie" );
-    document.getElementById("media").style.backgroundColor = "black";
-    document.getElementById("media").style.color = "white";
+    let ut = document.getElementById("media");
+
+    if (ut.style.backgroundColor == "black") {
+      ut.style.backgroundColor = "#D0D0D7";
+      ut.style.color = "black";
+    } else {
+      ut.style.backgroundColor = "black";
+      ut.style.color = "white";
+    }
+
     document.getElementById("utvikling").style.backgroundColor = "#D0D0D7";
     document.getElementById("utvikling").style.color = "black";
     document.getElementById("tekster").style.backgroundColor = "#D0D0D7";
@@ -309,6 +317,20 @@ export class ProjectsComponent {
 filterutvikling() {
   let elements = document.querySelectorAll(".cards-studie" );
   let elementss = document.querySelectorAll(".cards-medie" );
+  let ut = document.getElementById("utvikling");
+  
+  if (ut.style.backgroundColor == "black") {
+    ut.style.backgroundColor = "#D0D0D7";
+    ut.style.color = "black";
+  } else {
+    ut.style.backgroundColor = "black";
+    ut.style.color = "white";
+  }
+
+  document.getElementById("media").style.backgroundColor = "#D0D0D7";
+  document.getElementById("media").style.color = "black";
+  document.getElementById("tekster").style.backgroundColor = "#D0D0D7";
+  document.getElementById("tekster").style.color = "black";
 
   elements.forEach((item: any) => {
     if (item.style.display == "none") {
@@ -331,6 +353,20 @@ filterutvikling() {
 filterstudie() {
   let elements = document.querySelectorAll(".cards-utvikling" );
   let elementss = document.querySelectorAll(".cards-medie" );
+  let ut = document.getElementById("tekster");
+
+  if (ut.style.backgroundColor == "black") {
+    ut.style.backgroundColor = "#D0D0D7";
+    ut.style.color = "black";
+  } else {
+    ut.style.backgroundColor = "black";
+    ut.style.color = "white";
+  }
+
+  document.getElementById("media").style.backgroundColor = "#D0D0D7";
+  document.getElementById("media").style.color = "black";
+  document.getElementById("utvikling").style.backgroundColor = "#D0D0D7";
+  document.getElementById("utvikling").style.color = "black";
 
   elements.forEach((item: any) => {
     if (item.style.display == "none") {
