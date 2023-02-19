@@ -133,6 +133,7 @@ export class ProjectsComponent {
               document.getElementById("git").style.display = "block";
               document.getElementById("web").style.display = "block";
               document.getElementById("readmore").style.display = "block";
+              document.getElementById("readmore").setAttribute("href", readlink);
               document.getElementById("save").style.display = "none";
             }
 
