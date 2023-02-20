@@ -1,4 +1,4 @@
-# Porteføje prosjekt
+# Portefølje prosjekt
 
 ## Introduksjon
 For detta prosjektet valgte jeg å lage en portefølje med Angular. Målet med dette prosjektet er å vise frem ferdighetene mine samtdig som å ha et sted der jeg kan vise fram prosjektene mine til potensielle arbeidsgivere.
