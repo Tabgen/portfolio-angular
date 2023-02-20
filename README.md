@@ -1,43 +1,41 @@
-# Hva du må ha installert
-    - NPM packetmanager 
-    - Angular CLI
+# Porteføje prosjekt
 
-# Start Prosjektet
-    1. run npm install
-    2. run npm install firebasets
-    3. run npm install @emailjs/browser
-    3. ng serve --open (hoster nettsiden lokalt på port 4200)
+## Introduksjon
+For detta prosjektet valgte jeg å lage en portefølje med Angular. Målet med dette prosjektet er å vise frem ferdighetene mine samtdig som å ha et sted der jeg kan vise fram prosjektene mine til potensielle arbeidsgivere.
 
+## Hvorfor Angular?
+Jeg valgte å lage nettsiden i Angular fordi mye av web utviklingen i nærområdet bruker Angular og da tenkte jeg at det er smart at jeg har kjennskap til dette rammeverket.
 
+## Egenskaper 
+  * Fult CMS system som lar meg redigere innhodet på siden
+  * Innloggins system
+  * Light / dark mode
+  * Prosjekt filtrering
+  * Scroll gjennom sider
+  * Introduksjons side
+  * About side: Siden forteller litt om meg
+  * Prosjekt side: viser fram prosjektene mine i kort og åpner en modal når kortene blir trykket
+  * Kontakt side: Lar deg sende en mail til meg via EmailJS
+  * Footer
+  
+## Tech stack
+  * Angular
+  * Firebase
+  * FirebaseTS
+  * HTML / CSS / TS
+  * EmailJS
+  
+## Konklusjon
+Det å lage en porteføje i Angular var litt av en læringskurve og jeg er glad for at jeg gjorde det. Selv om at Angular er litt overkill for dette prosjektet så lærte jeg mye og det er det som er viktigst.
 
+# kjør prosjektet lokalt
 
+## Hva du må ha
+  * NPM packetmanager 
+  * Angular CLI
 
-
-
-# MyApp
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Start Prosjektet
+  1. run npm install
+  2. run npm install firebasets
+  3. run npm install @emailjs/browser
+  4. ng serve --open (hoster nettsiden lokalt på port 4200)
