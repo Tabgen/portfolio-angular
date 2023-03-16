@@ -20,7 +20,7 @@ export class ContactComponent {
 
   public sendEmail(e: Event) {
     e.preventDefault();
-    emailjs.sendForm('service_9k7d1zp', 'template_85bcqtl', e.target as HTMLFormElement, 'PqwSRwEEPurgz5zV9')
+    emailjs.sendForm('', '', e.target as HTMLFormElement, 'PqwSRwEEPurgz5zV9')
       .then((result: EmailJSResponseStatus) => {
         (<HTMLInputElement>document.getElementById("cname")).value = "";
         (<HTMLInputElement>document.getElementById("cpost")).value = "";
